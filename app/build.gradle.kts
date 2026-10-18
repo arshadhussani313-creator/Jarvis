@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
 }
+
 android {
     namespace = "com.jarvis.ai"
     compileSdk = 34
@@ -14,6 +15,7 @@ android {
         versionCode = 1
         versionName = "0.2.0-stage2"
     }
+
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -26,22 +28,28 @@ android {
             isMinifyEnabled = false
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
+
     kotlinOptions {
         jvmTarget = "17"
     }
+
     buildFeatures {
         compose = true
     }
-packaging {
-    jniLibs {
-        pickFirsts.add("lib/arm64-v8a/libandroidx.graphics.path.so")
-        pickFirsts.add("lib/armeabi-v7a/libandroidx.graphics.path.so")
+
+    packaging {
+        jniLibs {
+            pickFirsts.add("lib/arm64-v8a/libandroidx.graphics.path.so")
+            pickFirsts.add("lib/armeabi-v7a/libandroidx.graphics.path.so")
+        }
     }
 }
+
 dependencies {
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.core.ktx)
