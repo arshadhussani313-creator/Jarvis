@@ -20,7 +20,7 @@ android {
         release {
             isMinifyEnabled = false
             proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize-rules.pro"),
+                getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
         }
@@ -46,8 +46,6 @@ packaging {
     jniLibs {
         pickFirsts.add("lib/arm64-v8a/libandroidx.graphics.path.so")
         pickFirsts.add("lib/armeabi-v7a/libandroidx.graphics.path.so")
-    }
-}
     }
 }
 
