@@ -44,7 +44,7 @@ fun AiReactor(status: AssistantStatus, modifier: Modifier = Modifier) {
     val reduced = LocalReducedMotion.current
     val transition = rememberInfiniteTransition(label = "reactor")
 
-    val spin by transition.animateFloat(
+    val spinState = transition.animateFloat(
         initialValue = 0f,
         targetValue = 360f,
         animationSpec = infiniteRepeatable(
@@ -52,7 +52,7 @@ fun AiReactor(status: AssistantStatus, modifier: Modifier = Modifier) {
         ),
         label = "spin"
     )
-    val pulse by transition.animateFloat(
+    val pulseState = transition.animateFloat(
         initialValue = 0.94f,
         targetValue = 1.06f,
         animationSpec = infiniteRepeatable(
@@ -67,8 +67,8 @@ fun AiReactor(status: AssistantStatus, modifier: Modifier = Modifier) {
     Canvas(modifier = modifier.aspectRatio(1f)) {
         val center = this.center
         val radius = size.minDimension / 2f
-        val angle = if (reduced) 0f else spin
-        val scale = if (reduced) 1f else pulse
+        val angle = if (reduced) 0f else spinState.value
+        val scale = if (reduced) 1f else pulseState.value
 
         // Outer glow.
         drawCircle(
