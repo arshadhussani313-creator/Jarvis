@@ -20,7 +20,7 @@ android {
         release {
             isMinifyEnabled = false
             proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
+                getDefaultProguardFile("proguard-android-optimize-rules.pro"),
                 "proguard-rules.pro"
             )
         }
@@ -40,6 +40,11 @@ android {
 
     buildFeatures {
         compose = true
+    }
+
+    packagingOptions {
+        pickFirst 'lib/arm64-v8a/libandroidx.graphics.path.so'
+        pickFirst 'lib/armeabi-v7a/libandroidx.graphics.path.so'
     }
 }
 
