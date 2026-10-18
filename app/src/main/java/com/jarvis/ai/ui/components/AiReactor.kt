@@ -55,8 +55,8 @@ fun AiReactor(status: AssistantStatus, modifier: Modifier = Modifier) {
     val pulseState = transition.animateFloat(
         initialValue = 0.94f,
         targetValue = 1.06f,
-        animation = infiniteRepeatable(
-            animation = tween(pulseDurationMs(status), easing = FastOutSlowInEasing),
+        animationSpec = infiniteRepeatable(
+            animationSpec = tween(pulseDurationMs(status), easing = FastOutSlowInEasing),
             repeatMode = RepeatMode.Reverse
         ),
         label = "pulse"
