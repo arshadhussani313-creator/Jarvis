@@ -42,9 +42,10 @@ android {
         compose = true
     }
 
-    packagingOptions {
-        pickFirst 'lib/arm64-v8a/libandroidx.graphics.path.so'
-        pickFirst 'lib/armeabi-v7a/libandroidx.graphics.path.so'
+packagingOptions {
+    pickFirst("lib/arm64-v8a/libandroidx.graphics.path.so")
+    pickFirst("lib/armeabi-v7a/libandroidx.graphics.path.so")
+
     }
 }
 
