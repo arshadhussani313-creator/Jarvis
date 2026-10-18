@@ -1,4 +1,5 @@
 package com.jarvis.ai.ui.components
+import androidx.compose.runtime.getValue
 
 import androidx.compose.animation.core.LinearEasing
 import androidx.compose.animation.core.animateFloat
