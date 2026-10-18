@@ -48,7 +48,7 @@ fun AiReactor(status: AssistantStatus, modifier: Modifier = Modifier) {
         initialValue = 0f,
         targetValue = 360f,
         animationSpec = infiniteRepeatable(
-            animationSpec = tween(spinDurationMs(status), easing = LinearEasing)
+            animation = tween(spinDurationMs(status), easing = LinearEasing)
         ),
         label = "spin"
     )
@@ -56,7 +56,7 @@ fun AiReactor(status: AssistantStatus, modifier: Modifier = Modifier) {
         initialValue = 0.94f,
         targetValue = 1.06f,
         animationSpec = infiniteRepeatable(
-            animationSpec = tween(pulseDurationMs(status), easing = FastOutSlowInEasing),
+            animation = tween(pulseDurationMs(status), easing = FastOutSlowInEasing),
             repeatMode = RepeatMode.Reverse
         ),
         label = "pulse"
