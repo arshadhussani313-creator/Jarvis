@@ -13,7 +13,8 @@ android {
         minSdk = 29
         targetSdk = 34
         versionCode = 1
-        versionName = "0.2.0-stage2"
+     buildConfigField("String","GEMINI_API_KEY","\"your api\"")
+versionName = "0.2.0-stage2" 
     }
 
     buildTypes {
@@ -40,6 +41,7 @@ android {
 
     buildFeatures {
         compose = true
+'buildConfig = true'
     }
 
     packaging {
