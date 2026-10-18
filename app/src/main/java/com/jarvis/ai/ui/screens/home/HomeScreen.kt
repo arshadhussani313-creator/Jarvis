@@ -169,7 +169,7 @@ fun HomeScreen(
                 keyboardOptions = KeyboardOptions(imeAction = ImeAction.Send),
                 keyboardActions = KeyboardActions(onSend = { submit() })
             )
-            Button(onClick = submit, enabled = input.isNotBlank()) {
+            Button(onClick = {submit}, enabled = input.isNotBlank()) {
                 Text("Send")
             }
         }
