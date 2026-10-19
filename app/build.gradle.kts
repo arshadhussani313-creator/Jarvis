@@ -41,7 +41,7 @@ versionName = "0.2.0-stage2"
 
     buildFeatures {
         compose = true
-'buildConfig = true'
+buildConfig = true
     }
 
     packaging {
