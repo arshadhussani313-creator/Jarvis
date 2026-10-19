@@ -68,6 +68,7 @@ fun HomeScreen(
             delay(1000)
         }
     }
+    val speechText = rememberSaveable { mutableStateOf("") }
 
     var input by rememberSaveable { mutableStateOf("") }
     val submit = {
