@@ -13,8 +13,8 @@ android {
         minSdk = 29
         targetSdk = 34
         versionCode = 1
-     buildConfigField("String","GEMINI_API_KEY","\"AQ.Ab8RN6J-Mf7CUpg2iFqB-54KUsw_Tw8utokqipngzLCA10hlcA\"")
-versionName = "0.2.0-stage2" 
+     buildConfigField("String","GEMINI_API_KEY","\"AQ.Ab8RN6KRRkUBgMaO7rK7UZ1O7HMGBWUH1Da6CczFzvA2ss8gUA\"")
+versionName = "0.2.0-stage3" 
     }
 
     buildTypes {
